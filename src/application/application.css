@@ -1,25 +1,32 @@
+/*TODO Read again material you design styles guide and see if its possible improve the style and color palette*/
+
+/*
+*Background
+*
+*This adds an image as background.
+*TODO Search ways to improve it according MD3
+*/
 #mainHBox{
-    /*#eae4f1*/
     -fx-background-image: url(../Resources/imgs/background.png);
     -fx-background-repeat: stretch;
     -fx-background-size: 800 600;
     -fx-background-position: center center;
-
 }
 
-#centerVBox{
-    -fx-background-color: linear-gradient(to bottom, #ddecf3, #d5ddf3);/*#ddecf3;#e4ddf3*/
-    -fx-border-radius: 25 25 25 25;
-    -fx-background-radius: 25 25 25 25;
-    -fx-padding: 20px;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 30, 0, 0, 5);
-}
+/*
+*Left Button
+*
+*Adds an image to the button and make it semi-transparent, when the mouse is over the button the image is darker
+*TODO Add a style behavior when the user click the button
+*/
 #leftButton{
     -fx-border-color: transparent;
     -fx-border-width: 0;
+
     -fx-background-radius: 0;
     -fx-background-color: transparent;
     -fx-background-image: url(../Resources/imgs/favpng_arrow-keys-clockwise-material-design.png);
+
     -fx-opacity: 30%;
     -fx-rotate: -90;
     -fx-start-margin: 30px auto;
@@ -31,39 +38,23 @@
     -fx-opacity: 80%;
 }
 
-#rightButton{
-    -fx-border-color: transparent;
-    -fx-border-width: 0;
-    -fx-background-radius: 0;
-    -fx-background-color: transparent;
-    -fx-background-image: url(../Resources/imgs/favpng_arrow-keys-clockwise-material-design.png);
-    -fx-opacity: 30%;
-    -fx-rotate: 90;
-    -fx-start-margin: 30px auto;
-    -fx-background-size: 50px 50px;
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
-}
-#rightButton:hover{
-    -fx-opacity: 80%;
+/*
+*Mid Box
+*
+*This defines a slightly gradient to the box, round its corners, adds margin and a shadow below the object
+*/
+#centerVBox{
+    -fx-background-color: linear-gradient(to bottom, #ddecf3, #d5ddf3);
+    -fx-background-radius: 25 25 25 25;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 30, 0, 0, 5);
 }
 
-#skipButton{
-    -fx-padding: 1.3em 3em;
-    -fx-font-size: 12px;
-    -fx-font-weight: bold;
-    -fx-background-color: #eae4f1;
-    -fx-background-width: none;
-    -fx-background-radius: 90px;
-    -fx-effect: dropshadow(three-pass-box, rgba(54, 54, 54, 0.4), 60, 0, 0, 10);
-}
-#skipButton:hover{
-    -fx-background-color: #78bedc;/*#6b2ee5*/
-    -fx-effect: dropshadow(three-pass-box, rgba(84, 156, 182, 0.4), 30, 0, 0, 5);/*rgba(127, 90, 234, 0.4)*/
-    -fx-text-fill: #464646;
-    -fx-font-weight: bold;
-}
-
+/*
+*Progress Bar
+*
+*This adds a custom color to the box and bar, and makes them flat to pair with the rest of the design
+*/
 #splashProgressBar{
     -fx-accent: rgba(81, 195, 243, 0.85);
     -fx-background-color: #c5d7ec;
@@ -81,4 +72,53 @@
     -fx-control-inner-background: transparent;
     -fx-background-color: rgba(255, 255, 255, 0.1);
     -fx-background-insets: 0;
+}
+
+/*
+* Right Button
+*
+*This adds the other button with the same style as the left button
+*/
+#rightButton{
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-background-image: url(../Resources/imgs/favpng_arrow-keys-clockwise-material-design.png);
+
+    -fx-opacity: 30%;
+    -fx-rotate: 90;
+    -fx-start-margin: 30px auto;
+    -fx-background-size: 50px 50px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+#rightButton:hover{
+    -fx-opacity: 80%;
+}
+
+/*
+*Skip Button
+*
+*This adds a Skip button with round corners, shadow below and change its color when the mouse is over
+*TODO see if is possible add a good looking behavior when the user clicks the button
+*TODO change the font
+*/
+#skipButton{
+    -fx-padding: 1.3em 3em;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+
+    -fx-background-color: #eae4f1;
+    -fx-background-width: none;
+    -fx-background-radius: 90px;
+
+    -fx-effect: dropshadow(three-pass-box, rgba(54, 54, 54, 0.4), 60, 0, 0, 10);
+}
+#skipButton:hover{
+    -fx-background-color: #78bedc;
+    -fx-effect: dropshadow(three-pass-box, rgba(84, 156, 182, 0.4), 30, 0, 0, 5);
+    -fx-text-fill: #464646;
+    -fx-font-weight: bold;
 }
