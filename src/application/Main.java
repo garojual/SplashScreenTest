@@ -1,6 +1,7 @@
 package application;
-	
+
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 
@@ -12,10 +13,11 @@ public class Main extends Application {
 	* 2++ = Reset Password Screen
 	* IMPORTANT = Make the classes for all the other GUI's
 	*/
-	int sceneNumber = 1;
+	int sceneNumber = 0;
 
 	@Override
 	public void start(Stage primaryStage) {
+		//Splash Screen
 		if (sceneNumber == 0) {
 			try {
 				SplashScreen root = new SplashScreen();
@@ -28,6 +30,7 @@ public class Main extends Application {
 				e.printStackTrace();
 			}
 		}
+		//Register Screen
 		else if(sceneNumber == 1){
 			try {
 				SplashScreen root = new SplashScreen();
@@ -39,10 +42,13 @@ public class Main extends Application {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		} else{
+		}
+		//Reset Password
+		else {
+			FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/Resources/fxml/resetPasswordFirstScene.fxml"));
+			Scene scene;
 			try {
-				SplashScreen root = new SplashScreen();
-				Scene scene = new Scene(root, 800, 600);
+				scene = new Scene(fxmlLoader.load(), 800, 600);
 				scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 				primaryStage.setTitle("Music Player - Reset Password");
 				primaryStage.setScene(scene);

@@ -1,6 +1,32 @@
 /*TODO Read again material you design styles guide and see if its possible improve the style and color palette*/
 
 /*
+*Preset Button
+*
+*This adds a button with round corners, shadow below and change its color when the mouse is over
+*TODO see if is possible add a good looking behavior when the user clicks the button
+*TODO change the font
+*/
+.button{
+    -fx-padding: 1.3em 3em;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-font-family: SansSerif;
+
+    -fx-background-color: #eae4f1;
+    -fx-background-width: none;
+    -fx-background-radius: 90px;
+
+    -fx-effect: dropshadow(three-pass-box, rgba(54, 54, 54, 0.4), 60, 0, 0, 10);
+}
+.button:hover{
+    -fx-background-color: #78bedc;
+    -fx-effect: dropshadow(three-pass-box, rgba(84, 156, 182, 0.4), 30, 0, 0, 5);
+    -fx-text-fill: #464646;
+    -fx-font-weight: bold;
+}
+
+/*
 *Background
 *
 *This adds an image as background.
@@ -98,27 +124,3 @@
     -fx-opacity: 80%;
 }
 
-/*
-*Skip Button
-*
-*This adds a Skip button with round corners, shadow below and change its color when the mouse is over
-*TODO see if is possible add a good looking behavior when the user clicks the button
-*TODO change the font
-*/
-#skipButton{
-    -fx-padding: 1.3em 3em;
-    -fx-font-size: 12px;
-    -fx-font-weight: bold;
-
-    -fx-background-color: #eae4f1;
-    -fx-background-width: none;
-    -fx-background-radius: 90px;
-
-    -fx-effect: dropshadow(three-pass-box, rgba(54, 54, 54, 0.4), 60, 0, 0, 10);
-}
-#skipButton:hover{
-    -fx-background-color: #78bedc;
-    -fx-effect: dropshadow(three-pass-box, rgba(84, 156, 182, 0.4), 30, 0, 0, 5);
-    -fx-text-fill: #464646;
-    -fx-font-weight: bold;
-}

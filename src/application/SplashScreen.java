@@ -51,6 +51,9 @@ public class SplashScreen extends ScrollPane {
         centerVBox.setId("centerVBox");
         centerVBox.setAlignment(Pos.TOP_CENTER);
         centerVBox.setPrefWidth(500);
+        centerVBox.setPrefHeight(550);
+        centerVBox.setMaxHeight(USE_PREF_SIZE);
+        centerVBox.setTranslateY(25);
 
         splashProgressBar = new ProgressBar(0.25);
         splashProgressBar.setId("splashProgressBar");
@@ -68,7 +71,7 @@ public class SplashScreen extends ScrollPane {
         rightButton = new Button();
         rightButton.setId("rightButton");
         rightButton.setPrefSize(50, 50);
-        rightButton.setTranslateY(140);
+        rightButton.setTranslateY(125);
 
         auxHBOX = new HBox();
         auxHBOX.setAlignment(Pos.TOP_CENTER);
@@ -87,14 +90,14 @@ public class SplashScreen extends ScrollPane {
 
         mainHBox = new HBox();
         mainHBox.setId("mainHBox");
-        mainHBox.setPrefSize(800,600);
+        mainHBox.setPrefSize(798,598);//Modified to fill exactly the window without show the scroll bar
         mainHBox.getChildren().add(leftVBox);
         mainHBox.getChildren().add(centerVBox);
         mainHBox.getChildren().add(rightVBox);
 
         this.setContent(mainHBox);
-        this.prefHeight(800);
-        this.prefWidth(600);
+        this.prefWidth(800);
+        this.prefHeight(600);
 
     }
 

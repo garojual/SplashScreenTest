@@ -1,5 +1,6 @@
 module SplashScreenTest {
 	requires javafx.controls;
-	
-	opens application to javafx.graphics, javafx.fxml;
+    requires javafx.fxml;
+
+    opens application to javafx.graphics, javafx.fxml;
 }
