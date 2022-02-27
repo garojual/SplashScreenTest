@@ -1,29 +1,89 @@
-/*TODO Read again material you design styles guide and see if its possible improve the style and color palette*/
+/*
+*Material You Guidelines
+*Background Color: #FFFBFE  | Background Text: #1C1B1F  |                               |                               |
+*Outlines Color: #938F99    | Variant 1: #49454F        |  Variant 2: #CAC4D0           |                               |
+*Primary Color: #6750A4     | Primary Text: #FFFFFF     | Light Primary Cont: #EADDFF   | Light Primary Text: #21005D   |
+*Secondary Color: #625B71   | Secondary Text: #FFFFFF   | Light Secondary Cont: #E8DEF8 | Light Secondary Text: #1D192B |
+*Tertiary Color: #7D5260    | Tertiary Text: #FFFFFF    | Light Tertiary Cont: #F9DEDC  | Light Tertiary Text: #31111D  |
+*Error Color: #B3261E       | Error Text: #1C1B1F       | Light Error Cont: #F9DEDC     | Light Error Text: #410E0B     |
+*
+*TODO Read again material you design styles guide and see if its possible improve the style and color palette
+*/
 
 /*
 *Preset Button
 *
-*This adds a button with round corners, shadow below and change its color when the mouse is over
+*This adds a button with round corners and change its color when the mouse is over and clicks it
 *TODO see if is possible add a good looking behavior when the user clicks the button
 *TODO change the font
 */
 .button{
-    -fx-padding: 1.3em 3em;
-    -fx-font-size: 12px;
+    -fx-padding: 1em 3em;
+    -fx-font-size: 15px;
     -fx-font-weight: bold;
-    -fx-font-family: SansSerif;
+    -fx-font-family: "Roboto Medium";
+    -fx-text-fill: #FFFFFF;
 
-    -fx-background-color: #eae4f1;
+    -fx-background-color: #6750A4;
     -fx-background-width: none;
     -fx-background-radius: 90px;
 
-    -fx-effect: dropshadow(three-pass-box, rgba(54, 54, 54, 0.4), 60, 0, 0, 10);
+    -fx-cursor: hand;
 }
 .button:hover{
-    -fx-background-color: #78bedc;
-    -fx-effect: dropshadow(three-pass-box, rgba(84, 156, 182, 0.4), 30, 0, 0, 5);
-    -fx-text-fill: #464646;
+    -fx-background-color: #7F67BE;
+    /*-fx-text-fill: #464646;*/
     -fx-font-weight: bold;
+}
+.button:armed{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-scale-z: 1.1;
+    -fx-background-color: #4F378B;
+}
+
+/*
+*Preset Font Style
+*/
+.label{
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Roboto Medium";
+    -fx-text-fill: #1C1B1F;
+}
+
+/*
+*Preset Text Field
+*
+*This adds a flat text field with rounded corners and adds a darker border when the user input the text
+*Applies to the password field to
+*/
+.text-field{
+    -fx-background-color: #CAC4D0;
+    -fx-background-width: none;
+    -fx-background-radius: 90px;
+
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Roboto Medium";
+    -fx-text-fill: #49454F;
+
+}
+.text-field:focused{
+    -fx-border-radius: 90px;
+    -fx-border-color: #938F99;
+    -fx-border-width: 1px;
+}
+
+/*
+*Preset Separator
+*
+*This adds a flat and thin separator
+*/
+.separator *.line {
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 1.5 0;
+    -fx-border-color: #7D5260;
 }
 
 /*
@@ -33,10 +93,11 @@
 *TODO Search ways to improve it according MD3
 */
 #mainHBox{
-    -fx-background-image: url(../Resources/imgs/background.png);
+    /*-fx-background-image: url(../Resources/imgs/background.png);
     -fx-background-repeat: stretch;
     -fx-background-size: 800 600;
-    -fx-background-position: center center;
+    -fx-background-position: center center;*/
+    -fx-background-color: #E7E0EC;
 }
 
 /*
@@ -59,9 +120,22 @@
     -fx-background-size: 50px 50px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
+
+    -fx-cursor: hand;
 }
 #leftButton:hover{
     -fx-opacity: 80%;
+
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-scale-z: 1.1;
+}
+#leftButton:armed{
+    -fx-opacity: 80%;
+
+    -fx-scale-x: 1.25;
+    -fx-scale-y: 1.25;
+    -fx-scale-z: 1.25;
 }
 
 /*
@@ -70,10 +144,12 @@
 *This defines a slightly gradient to the box, round its corners, adds margin and a shadow below the object
 */
 #centerVBox{
-    -fx-background-color: linear-gradient(to bottom, #ddecf3, #d5ddf3);
+    /*-fx-background-color: linear-gradient(to bottom, #ddecf3, #d5ddf3);*/
+    -fx-background-color: #FFFBFE;
     -fx-background-radius: 25 25 25 25;
     -fx-padding: 20px;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 30, 0, 0, 5);
+    /*-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 30, 0, 0, 5);*/
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 4, 0, 0, 3);
 }
 
 /*
@@ -82,21 +158,21 @@
 *This adds a custom color to the box and bar, and makes them flat to pair with the rest of the design
 */
 #splashProgressBar{
-    -fx-accent: rgba(81, 195, 243, 0.85);
+    -fx-accent: #6750A4;
     -fx-background-color: #c5d7ec;
 }
 #splashProgressBar .bar {
     -fx-padding: 4px;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
-    -fx-background-color: #78bedc;
+    -fx-background-color: #6750A4;
 }
 #splashProgressBar > .track {
     -fx-border-radius: 0;
     -fx-background-radius: 0;
     -fx-text-box-border: transparent;
     -fx-control-inner-background: transparent;
-    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-color: #EADDFF;
     -fx-background-insets: 0;
 }
 
@@ -119,8 +195,101 @@
     -fx-background-size: 50px 50px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
+
+    -fx-cursor: hand;
 }
 #rightButton:hover{
     -fx-opacity: 80%;
+
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-scale-z: 1.1;
+}
+#rightButton:armed{
+    -fx-opacity: 80%;
+
+    -fx-scale-x: 1.25;
+    -fx-scale-y: 1.25;
+    -fx-scale-z: 1.25;
 }
 
+#lockImg{
+    -fx-opacity: 80%; /*Changed to make it more consistent with the font color*/
+}
+
+#titleText{
+    -fx-font-size: 30px;
+}
+
+#showPasswordButton{
+    -fx-opacity: 60%;
+    -fx-cursor: hand;
+}
+#showPasswordButton:hover{
+    -fx-opacity: 80%;
+}
+
+/*
+*Back Button
+*
+*This adds a transparent button who only displays the text
+*TODO this style can be applied for tertiary buttons
+*/
+#backButton{
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+
+    -fx-text-fill: #79747E;
+}
+#backButton:hover{
+    -fx-text-fill: #21005D ;
+}
+
+#skipButton{
+    -fx-background-color: #625B71;
+}
+#skipButton:hover{
+    -fx-background-color: #7A7289;
+}
+#skipButton:armed{
+    -fx-background-color: #4A4458;
+}
+
+#errorLabel{
+    -fx-text-fill: #B3261E;
+}
+
+#eyeButtonOff{
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-background-image: url(../Resources/imgs/eye-off.png);
+
+    -fx-opacity: 30%;
+
+    -fx-cursor: hand;
+}
+#eyeButtonOff:hover{
+    -fx-opacity: 80%;
+}
+
+#eyeButtonOn{
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-background-image: url(../Resources/imgs/eye.png);
+
+    -fx-opacity: 30%;
+
+    -fx-cursor: hand;
+}
+#eyeButtonOn:hover{
+    -fx-opacity: 80%;
+}

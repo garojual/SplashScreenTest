@@ -4,6 +4,8 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
@@ -22,6 +24,10 @@ public class SplashScreen extends ScrollPane {
     private Button skipButton;
 
     private ProgressBar splashProgressBar;
+
+    private Image splashImg;
+
+    private ImageView splashImgView;
 
 
     public SplashScreen(){
@@ -58,8 +64,13 @@ public class SplashScreen extends ScrollPane {
         splashProgressBar = new ProgressBar(0.25);
         splashProgressBar.setId("splashProgressBar");
 
+        splashImgView = new ImageView();
+        splashImg = new Image(getClass().getResourceAsStream("/imgs/splash1-1.png"));
+        splashImgView.setImage(splashImg);
+
         //Need add imageview and content
         centerVBox.getChildren().add(splashProgressBar);
+        centerVBox.getChildren().add(splashImgView);
 
         //END MID BOX AND PROGRESS BAR --------------------------
 
@@ -77,9 +88,9 @@ public class SplashScreen extends ScrollPane {
         auxHBOX.setAlignment(Pos.TOP_CENTER);
         auxHBOX.setPrefHeight(150);
 
-        skipButton = new Button("S K I P");
+        skipButton = new Button("Skip");
         skipButton.setId("skipButton");
-        skipButton.setTranslateY(30);
+        skipButton.setTranslateY(25);//30
 
         auxHBOX.getChildren().add(skipButton);
 
