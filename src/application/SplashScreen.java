@@ -77,9 +77,9 @@ public class SplashScreen extends ScrollPane {
         auxHBOX.setAlignment(Pos.TOP_CENTER);
         auxHBOX.setPrefHeight(150);
 
-        skipButton = new Button("S K I P");
+        skipButton = new Button("Skip");
         skipButton.setId("skipButton");
-        skipButton.setTranslateY(30);
+        skipButton.setTranslateY(25);//30
 
         auxHBOX.getChildren().add(skipButton);
 

@@ -8,22 +8,59 @@
 *TODO change the font
 */
 .button{
-    -fx-padding: 1.3em 3em;
-    -fx-font-size: 12px;
+    -fx-padding: 1em 3em;
+    -fx-font-size: 15px;
     -fx-font-weight: bold;
-    -fx-font-family: SansSerif;
+    -fx-font-family: "Roboto Medium";
+    -fx-text-fill: #FFFBFE;
 
-    -fx-background-color: #eae4f1;
+    -fx-background-color: #6750A4;
     -fx-background-width: none;
     -fx-background-radius: 90px;
 
-    -fx-effect: dropshadow(three-pass-box, rgba(54, 54, 54, 0.4), 60, 0, 0, 10);
+    /*-fx-effect: dropshadow(three-pass-box, rgba(54, 54, 54, 0.4), 60, 0, 0, 10);*/
+
+    -fx-cursor: hand;
 }
 .button:hover{
-    -fx-background-color: #78bedc;
-    -fx-effect: dropshadow(three-pass-box, rgba(84, 156, 182, 0.4), 30, 0, 0, 5);
-    -fx-text-fill: #464646;
+    /*-fx-background-color: #EADDFF;*/
+    /*-fx-text-fill: #464646;*/
     -fx-font-weight: bold;
+}
+.button:armed{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-scale-z: 1.1;
+    -fx-background-color: #625B71;
+    -fx-text-fill: #FFFBFE;
+}
+
+.label{
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Roboto Medium";
+    -fx-text-fill: #1C1B1F;
+}
+
+.text-field{
+    -fx-background-color: #E7E0EC;
+    -fx-background-width: none;
+    -fx-background-radius: 90px;
+
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Roboto Medium";
+    -fx-text-fill: #49454F;
+
+}
+.text-field:hover{
+
+}
+
+.separator *.line {
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 1.5 0; /* its make really one-pixel-border */
+    -fx-border-color: #7D5260;
 }
 
 /*
@@ -33,10 +70,11 @@
 *TODO Search ways to improve it according MD3
 */
 #mainHBox{
-    -fx-background-image: url(../Resources/imgs/background.png);
+    /*-fx-background-image: url(../Resources/imgs/background.png);
     -fx-background-repeat: stretch;
     -fx-background-size: 800 600;
-    -fx-background-position: center center;
+    -fx-background-position: center center;*/
+    -fx-background-color: #E7E0EC;
 }
 
 /*
@@ -59,9 +97,22 @@
     -fx-background-size: 50px 50px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
+
+    -fx-cursor: hand;
 }
 #leftButton:hover{
     -fx-opacity: 80%;
+
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-scale-z: 1.1;
+}
+#leftButton:armed{
+    -fx-opacity: 80%;
+
+    -fx-scale-x: 1.25;
+    -fx-scale-y: 1.25;
+    -fx-scale-z: 1.25;
 }
 
 /*
@@ -70,10 +121,12 @@
 *This defines a slightly gradient to the box, round its corners, adds margin and a shadow below the object
 */
 #centerVBox{
-    -fx-background-color: linear-gradient(to bottom, #ddecf3, #d5ddf3);
+    /*-fx-background-color: linear-gradient(to bottom, #ddecf3, #d5ddf3);*/
+    -fx-background-color: #FFFBFE;
     -fx-background-radius: 25 25 25 25;
     -fx-padding: 20px;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 30, 0, 0, 5);
+    /*-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 30, 0, 0, 5);*/
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 4, 0, 0, 3);
 }
 
 /*
@@ -82,21 +135,21 @@
 *This adds a custom color to the box and bar, and makes them flat to pair with the rest of the design
 */
 #splashProgressBar{
-    -fx-accent: rgba(81, 195, 243, 0.85);
+    -fx-accent: #6750A4;
     -fx-background-color: #c5d7ec;
 }
 #splashProgressBar .bar {
     -fx-padding: 4px;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
-    -fx-background-color: #78bedc;
+    -fx-background-color: #6750A4;
 }
 #splashProgressBar > .track {
     -fx-border-radius: 0;
     -fx-background-radius: 0;
     -fx-text-box-border: transparent;
     -fx-control-inner-background: transparent;
-    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-color: #EADDFF;
     -fx-background-insets: 0;
 }
 
@@ -119,8 +172,49 @@
     -fx-background-size: 50px 50px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
+
+    -fx-cursor: hand;
 }
 #rightButton:hover{
     -fx-opacity: 80%;
+
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-scale-z: 1.1;
+}
+#rightButton:armed{
+    -fx-opacity: 80%;
+
+    -fx-scale-x: 1.25;
+    -fx-scale-y: 1.25;
+    -fx-scale-z: 1.25;
 }
 
+#lockImg{
+    -fx-opacity: 80%;
+}
+
+#titleText{
+    -fx-font-size: 30px;
+}
+
+#showPasswordButton{
+    -fx-opacity: 60%;
+    -fx-cursor: hand;
+}
+#showPasswordButton:hover{
+    -fx-opacity: 80%;
+}
+
+#backButton{
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+
+    -fx-text-fill: #79747E;
+}
+#backButton:hover{
+    -fx-text-fill: #21005D ;
+}

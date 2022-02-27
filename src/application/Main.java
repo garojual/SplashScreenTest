@@ -13,7 +13,7 @@ public class Main extends Application {
 	* 2++ = Reset Password Screen
 	* IMPORTANT = Make the classes for all the other GUI's
 	*/
-	int sceneNumber = 0;
+	int sceneNumber = 2;
 
 	@Override
 	public void start(Stage primaryStage) {
