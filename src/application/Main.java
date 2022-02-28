@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 
 public class Main extends Application {
-	/*
+	/*HHHHHHHH
 	* sceneNumber controls for now which part of the GUI is displayed
 	* 0   = Splash Screen
 	* 1   = Register Screen
