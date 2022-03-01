@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@../../../../OneDrive/Documentos/Proyecto/SplashScreenTest/src/application/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@../../application/application.css" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="application.RegisterScreenController" xmlns:fx="http://javafx.com/fxml/1">
    <content>
       <HBox id="mainHBox" alignment="CENTER" prefHeight="598.0" prefWidth="798.0">
          <children>
@@ -57,7 +57,7 @@
                            <children>
                               <Label text="Password" translateX="10.0" />
                               <PasswordField translateX="45.0" />
-                              <Button id="eyeButtonOff" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="Button" translateX="50.0" />
+                              <Button id="eyeButtonOff" fx:id="eyeButton" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" onAction="#onEyeButton" text="Button" translateX="50.0"  />
                            </children>
                            <VBox.margin>
                               <Insets left="40.0" />

@@ -14,7 +14,7 @@ public class Main extends Application {
 	* 2++ = Reset Password Screen
 	* IMPORTANT = Make the classes for all the other GUI's
 	*/
-	int sceneNumber = 2;
+	int sceneNumber = 1;
 	Image icon = new Image(getClass().getResourceAsStream("/Resources/imgs/32x32logo.png"));
 
 	@Override

@@ -7,15 +7,12 @@
 *Tertiary Color: #7D5260    | Tertiary Text: #FFFFFF    | Light Tertiary Cont: #F9DEDC  | Light Tertiary Text: #31111D  |
 *Error Color: #B3261E       | Error Text: #1C1B1F       | Light Error Cont: #F9DEDC     | Light Error Text: #410E0B     |
 *
-*TODO Read again material you design styles guide and see if its possible improve the style and color palette
 */
 
 /*
 *Preset Button
 *
 *This adds a button with round corners and change its color when the mouse is over and clicks it
-*TODO see if is possible add a good looking behavior when the user clicks the button
-*TODO change the font
 */
 .button{
     -fx-padding: 1em 3em;
@@ -89,8 +86,7 @@
 /*
 *Background
 *
-*This adds an image as background.
-*TODO Search ways to improve it according MD3
+*This adds the background color.
 */
 #mainHBox{
     /*-fx-background-image: url(../Resources/imgs/background.png);
@@ -104,7 +100,6 @@
 *Left Button
 *
 *Adds an image to the button and make it semi-transparent, when the mouse is over the button the image is darker
-*TODO Add a style behavior when the user click the button
 */
 #leftButton{
     -fx-border-color: transparent;
@@ -233,7 +228,7 @@
 *Back Button
 *
 *This adds a transparent button who only displays the text
-*TODO this style can be applied for tertiary buttons
+*NOTE this style can be applied for tertiary buttons
 */
 #backButton{
     -fx-border-color: transparent;
