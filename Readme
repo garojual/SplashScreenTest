@@ -1,0 +1,6 @@
+Integrantes: Juan Alejandro Gallego Rodriguez | Juliana Reina | Johan Esteban |
+
+Uso: Para cambiar entre interfaces debe de modificarse la variable sceneNumber para desplegar cada una de estas
+  0 = Splash Screen
+  1 = Register Screen
+  2 = Reset Password
